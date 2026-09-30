@@ -18,17 +18,18 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
+                echo 'Application deployed successfully!'
             }
         }
     }
 
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'Deployment completed successfully!'
         }
 
         failure {
-            echo 'Pipeline failed!'
+            echo 'Deployment failed!'
         }
     }
 }
